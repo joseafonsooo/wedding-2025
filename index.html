@@ -27,6 +27,85 @@
             color: #333;
         }
 
+        body {
+            scroll-behavior: smooth;
+            background-color: #f1f1f1;
+        }
+
+        .menu-wrapper {
+            position: fixed;
+            top: 0;
+            right: 0;
+            margin: 16px;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
+            align-items: center;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #fff;
+            width: 40px;
+            height: 40px;
+            border-radius: 999px;
+            border: none;
+            box-shadow: 0px 2px 8px #cacaca;
+            cursor: pointer;
+            transition: box-shadow .15s linear;
+        }
+
+        .menu-wrapper:hover {
+            box-shadow: 0px 2px 16px #afafaf;
+            transition: box-shadow .15s linear;
+        }
+
+        .menu-wrapper ul {
+            display: none;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            flex-flow: column wrap;
+            justify-content: center;
+            align-items: self-start;
+            background: #fff;
+            padding: 20px;
+            box-sizing: border-box;
+            margin: 0 16px;
+            position: fixed;
+            top: 74px;
+            right: 0;
+            border-radius: 10px;
+            box-shadow: 0px 2px 8px #cacaca;
+        }
+
+        .menu-wrapper ul.show {
+            display: flex;
+        }
+
+        .menu-wrapper ul li {
+            font-weight: 600;
+            margin: 0 0 12px;
+        }
+
+        .menu-wrapper ul li:last-of-type {
+            margin: 0 0 0;
+        }
+
+        .menu-wrapper .button {
+            width: 24px;
+            height: 24px;
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .menu-wrapper.dots .button {
+            background-image: url("../assets/m-dots.svg");
+        }
+
+        .menu-wrapper.close .button {
+            background-image: url("../assets/m-close.svg");
+        }
+
         .location-wrapper {
             max-width: 425px;
             margin: 0 auto;
@@ -34,22 +113,24 @@
             box-sizing: border-box;
         }
 
-        .location-wrapper h1 {
+        .location-wrapper h2 {
             font-size: 24px;
             font-weight: 700;
             margin: 0 0 32px;
-        }
-
-        .location-wrapper .info h2 {
-            font-size: 18px;
-            font-weight: 700;
-            margin: 0 0 4px;
+            padding: 0 0 12px;
+            border-bottom: 1px solid #bfbfbf;
         }
 
         .location-wrapper .info h3 {
+            font-size: 18px;
+            font-weight: 700;
+            margin: 0;
+        }
+
+        .location-wrapper .info h4 {
             font-size: 16px;
             font-weight: 400;
-            margin: 0 0 8px;
+            margin: 0 0 24px;
         }
 
         .location-wrapper .info .links {
@@ -57,14 +138,15 @@
             flex-flow: column wrap;
             justify-content: center;
             align-items: center;
-            gap: 12px;
+            gap: 16px;
             margin: 0 0 32px;
         }
 
         .location-wrapper .info .links a {
             width: 100%;
             border-radius: 999px;
-            border: 1px solid #333;
+            border: none;
+            box-shadow: 0px 2px 8px #cacaca;
             box-sizing: border-box;
             display: flex;
             flex-flow: row wrap;
@@ -73,10 +155,17 @@
             gap: 12px;
             height: 42px;
             text-decoration: none;
-            color: #333;
+            color: #888888;
+            background-color: #fff;
             font-size: 13px;
             font-weight: bold;
             padding: 0 0 0 10px;
+            transition: box-shadow .15s linear;
+        }
+
+        .location-wrapper .info .links a:hover {
+            box-shadow: 0px 2px 16px #afafaf;
+            transition: box-shadow .15s linear;
         }
 
         .location-wrapper .info .links a div {
@@ -104,11 +193,20 @@
 </head>
 
 <body>
-    <section class="location-wrapper">
-        <h1>Localizações do dia !</h1>
+    <div id="top"></div>
+    <section class="menu-wrapper dots">
+        <div class="button"></div>
+        <ul>
+            <li onclick="goToHash('#top')">Inicio</li>
+            <li onclick="goToHash('#location')">Locais</li>
+        </ul>
+    </section>
+
+    <section class="location-wrapper" id="location">
+        <h2>Locais das celebrações</h2>
         <div class="info">
-            <h2>Cerimónia</h2>
-            <h3>12:30h</h3>
+            <h3>Cerimónia</h3>
+            <h4>12:30h</h4>
             <div class="links">
                 <a href="https://maps.apple.com/place?place-id=ID830986AE4C6C091&_provider=9902" target="_blank"
                     class="apple">Abrir com Apple Maps<div></div></a>
@@ -119,8 +217,8 @@
             </div>
         </div>
         <div class="info">
-            <h2>Copo de Água</h2>
-            <h3>14:30h</h3>
+            <h3>Copo de Água</h3>
+            <h4>14:30h</h4>
             <div class="links">
                 <a href="https://maps.apple.com/place?place-id=I26C156F6E0B97A92&_provider=9902" target="_blank"
                     class="apple">Abrir com Apple Maps<div></div></a>
@@ -131,6 +229,37 @@
             </div>
         </div>
     </section>
+
+    <script>
+        function menuControl() {
+            var menu = document.querySelector(".menu-wrapper");
+            menu.addEventListener("click", function (event) {
+                if (menu.classList.contains("dots")) {
+                    menu.classList.remove("dots");
+                    menu.classList.add("close");
+                    menu.querySelector("ul").classList.add("show");
+                } else {
+                    menu.classList.add("dots");
+                    menu.classList.remove("close");
+                    menu.querySelector("ul").classList.remove("show");
+                }
+            });
+            document.addEventListener("click", function (event) {
+                var targetElement = event.target;
+                if (!menu.contains(targetElement)) {
+                    menu.classList.add("dots");
+                    menu.classList.remove("close");
+                    menu.querySelector("ul").classList.remove("show");
+                }
+            });
+        }
+
+        function goToHash(element) {
+            location.hash = element;
+        }
+   
+        menuControl();
+   </script>
 </body>
 
 </html>
