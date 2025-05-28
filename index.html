@@ -1,22 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Casamento e Batismo 2025</title>
-</head>
-<body>
-    <h1></h1>Localizações Importantes
-    <h2>Cerimónia</h2>
-    <h3>12:30h</h3>
-    <a href="https://maps.apple.com/place?place-id=ID830986AE4C6C091&_provider=9902" target="_blank" class="apple"></a>
-    <a href="https://maps.app.goo.gl/DVB7MzrrPY5Hup3j8" target="_blank" class="google"></a>
-    <a href="https://ul.waze.com/ul?ll=38.77025442%2C-7.71661878&navigate=yes&zoom=17&utm_campaign=default&utm_source=waze_website&utm_medium=lm_share_location" target="_blank" class="waze"></a>
+    <style>
+        html,
+        body,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p,
+        span,
+        a,
+        i,
+        u,
+        li {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+            color: #333;
+        }
 
-    <h2>Copo de Água</h2>
-    <h3>14:30h</h3>
-    <a href="https://maps.apple.com/place?place-id=I26C156F6E0B97A92&_provider=9902" target="_blank" class="apple"></a>
-    <a href="https://maps.app.goo.gl/HaU7NgmMrsdXaa3p9" target="_blank" class="google"></a>
-    <a href="https://ul.waze.com/ul?venue_id=230752642.-1987178733.11491140&overview=yes&utm_campaign=default&utm_source=waze_website&utm_medium=lm_share_location" target="_blank" class="waze"></a>
+        .location-wrapper {
+            max-width: 425px;
+            margin: 0 auto;
+            padding: 42px 16px;
+            box-sizing: border-box;
+        }
+
+        .location-wrapper h1 {
+            font-size: 24px;
+            font-weight: 700;
+            margin: 0 0 32px;
+        }
+
+        .location-wrapper .info h2 {
+            font-size: 18px;
+            font-weight: 700;
+            margin: 0 0 4px;
+        }
+
+        .location-wrapper .info h3 {
+            font-size: 16px;
+            font-weight: 400;
+            margin: 0 0 8px;
+        }
+
+        .location-wrapper .info .links {
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 12px;
+            margin: 0 0 32px;
+        }
+
+        .location-wrapper .info .links a {
+            width: 100%;
+            border-radius: 999px;
+            border: 1px solid #333;
+            box-sizing: border-box;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 12px;
+            height: 42px;
+            text-decoration: none;
+            color: #333;
+            font-size: 13px;
+            font-weight: bold;
+            padding: 0 0 0 10px;
+        }
+
+        .location-wrapper .info .links a div {
+            width: 46px;
+            height: 28px;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            border-radius: 999px;
+        }
+
+        .location-wrapper .info .links a.apple div {
+            background-image: url("../assets/apple.png");
+        }
+
+        .location-wrapper .info .links a.google div {
+            background-image: url("../assets/google.png");
+        }
+
+        .location-wrapper .info .links a.waze div {
+            background-image: url("../assets/waze.png");
+        }
+    </style>
+
+</head>
+
+<body>
+    <section class="location-wrapper">
+        <h1>Localizações do dia !</h1>
+        <div class="info">
+            <h2>Cerimónia</h2>
+            <h3>12:30h</h3>
+            <div class="links">
+                <a href="https://maps.apple.com/place?place-id=ID830986AE4C6C091&_provider=9902" target="_blank"
+                    class="apple">Abrir com Apple Maps<div></div></a>
+                <a href="https://maps.app.goo.gl/DVB7MzrrPY5Hup3j8" target="_blank" class="google">Abrir com Google
+                    Maps<div></div></a>
+                <a href="https://ul.waze.com/ul?ll=38.77025442%2C-7.71661878&navigate=yes&zoom=17&utm_campaign=default&utm_source=waze_website&utm_medium=lm_share_location"
+                    target="_blank" class="waze">Abrir com Waze<div></div></a>
+            </div>
+        </div>
+        <div class="info">
+            <h2>Copo de Água</h2>
+            <h3>14:30h</h3>
+            <div class="links">
+                <a href="https://maps.apple.com/place?place-id=I26C156F6E0B97A92&_provider=9902" target="_blank"
+                    class="apple">Abrir com Apple Maps<div></div></a>
+                <a href="https://maps.app.goo.gl/HaU7NgmMrsdXaa3p9" target="_blank" class="google">Abrir com Google
+                    Maps<div></div></a>
+                <a href="https://ul.waze.com/ul?venue_id=230752642.-1987178733.11491140&overview=yes&utm_campaign=default&utm_source=waze_website&utm_medium=lm_share_location"
+                    target="_blank" class="waze">Abrir com Waze<div></div></a>
+            </div>
+        </div>
+    </section>
 </body>
+
 </html>
