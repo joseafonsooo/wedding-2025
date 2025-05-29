@@ -99,21 +99,21 @@
         }
 
         .menu-wrapper.dots .button {
-            background-image: url("../assets/m-dots.svg");
+            background-image: url("assets/m-dots.svg");
         }
 
         .menu-wrapper.close .button {
-            background-image: url("../assets/m-close.svg");
+            background-image: url("assets/m-close.svg");
         }
 
-        .location-wrapper {
+        .wrapper {
             max-width: 425px;
             margin: 0 auto;
             padding: 42px 16px;
             box-sizing: border-box;
         }
 
-        .location-wrapper h2 {
+        .wrapper h2 {
             font-size: 24px;
             font-weight: 700;
             margin: 0 0 32px;
@@ -121,19 +121,19 @@
             border-bottom: 1px solid #bfbfbf;
         }
 
-        .location-wrapper .info h3 {
+        .wrapper .info h3 {
             font-size: 18px;
             font-weight: 700;
             margin: 0;
         }
 
-        .location-wrapper .info h4 {
+        .wrapper .info h4 {
             font-size: 16px;
             font-weight: 400;
             margin: 0 0 24px;
         }
 
-        .location-wrapper .info .links {
+        .wrapper .info .links {
             display: flex;
             flex-flow: column wrap;
             justify-content: center;
@@ -142,7 +142,7 @@
             margin: 0 0 32px;
         }
 
-        .location-wrapper .info .links a {
+        .wrapper .info .links a {
             width: 100%;
             border-radius: 999px;
             border: none;
@@ -163,12 +163,12 @@
             transition: box-shadow .15s linear;
         }
 
-        .location-wrapper .info .links a:hover {
+        .wrapper .info .links a:hover {
             box-shadow: 0px 2px 16px #afafaf;
             transition: box-shadow .15s linear;
         }
 
-        .location-wrapper .info .links a div {
+        .wrapper .info .links a div {
             width: 46px;
             height: 28px;
             background-size: cover;
@@ -177,16 +177,16 @@
             border-radius: 999px;
         }
 
-        .location-wrapper .info .links a.apple div {
-            background-image: url("../assets/apple.png");
+        .wrapper .info .links a.apple div {
+            background-image: url("assets/apple.png");
         }
 
-        .location-wrapper .info .links a.google div {
-            background-image: url("../assets/google.png");
+        .wrapper .info .links a.google div {
+            background-image: url("assets/google.png");
         }
 
-        .location-wrapper .info .links a.waze div {
-            background-image: url("../assets/waze.png");
+        .wrapper .info .links a.waze div {
+            background-image: url("assets/waze.png");
         }
     </style>
 
@@ -202,7 +202,14 @@
         </ul>
     </section>
 
-    <section class="location-wrapper" id="location">
+    <section class="intro-wrapper wrapper" id="intro">
+        <h2>Querida família e amigos !</h2>
+        <div class="info">
+            <p>Sejam muito bem-vindos a esta festa tão especial, onde decidimos juntar o casamento e o baptizado — porque gostamos de emoções fortes e não sabemos fazer as coisas pela metade!<br>O texto pode ter vindo da inteligência artificial (sim, queríamos uma introdução moderna e com pinta!), mas a alegria e o amor são bem reais e bem nossos.<br>Obrigado por estarem aqui connosco.<br>Agora é tempo de celebrar!</p>
+        </div>
+    </section>
+
+    <section class="location-wrapper wrapper" id="location">
         <h2>Locais das celebrações</h2>
         <div class="info">
             <h3>Cerimónia</h3>
@@ -229,6 +236,8 @@
             </div>
         </div>
     </section>
+
+    
 
     <script>
         function menuControl() {
