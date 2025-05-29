@@ -106,6 +106,11 @@
             background-image: url("assets/m-close.svg");
         }
 
+        #top {
+            height: 56px;
+            width: 100%;
+        }
+
         .wrapper {
             max-width: 425px;
             margin: 0 auto;
@@ -129,6 +134,11 @@
 
         .wrapper .info h4 {
             font-size: 16px;
+            font-weight: 400;
+            margin: 0 0 24px;
+        }
+
+        .wrapper .info p {
             font-weight: 400;
             margin: 0 0 24px;
         }
@@ -203,9 +213,13 @@
     </section>
 
     <section class="intro-wrapper wrapper" id="intro">
-        <h2>Querida família e amigos !</h2>
+        <h2>Querida família e amigos</h2>
         <div class="info">
-            <p>Sejam muito bem-vindos a esta festa tão especial, onde decidimos juntar o casamento e o baptizado — porque gostamos de emoções fortes e não sabemos fazer as coisas pela metade!<br>O texto pode ter vindo da inteligência artificial (sim, queríamos uma introdução moderna e com pinta!), mas a alegria e o amor são bem reais e bem nossos.<br>Obrigado por estarem aqui connosco.<br>Agora é tempo de celebrar!</p>
+            <p>Sejam muito bem-vindos a esta festa tão especial, onde decidimos juntar o casamento e o baptizado —
+                porque gostamos de emoções fortes e não sabemos fazer as coisas pela metade!<br>O texto pode ter vindo
+                da inteligência artificial (sim, queríamos uma introdução moderna e com pinta!), mas a alegria e o amor
+                são bem reais e bem nossos.<br>Obrigado por participarem connosco!</p>
+            <h3>Começa em: <h4 id="countdown"></h4></h3> 
         </div>
     </section>
 
@@ -237,7 +251,7 @@
         </div>
     </section>
 
-    
+
 
     <script>
         function menuControl() {
@@ -262,13 +276,37 @@
                 }
             });
         }
+        menuControl();
 
         function goToHash(element) {
             location.hash = element;
         }
-   
-        menuControl();
-   </script>
+
+
+        const targetDate = new Date("2025-06-13T23:59:59");
+        function updateCountdown() {
+            const now = new Date();
+            const diff = targetDate - now;
+
+            if (diff <= 0) {
+                document.getElementById("countdown").textContent = "0d  0h  0m  0s";
+                clearInterval(interval);
+                return;
+            }
+
+            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+            const minutes = Math.floor((diff / (1000 * 60)) % 60);
+            const seconds = Math.floor((diff / 1000) % 60);
+
+            document.getElementById("countdown").textContent =
+                `${days}d  ${hours}h  ${minutes}m  ${seconds}s`;
+        }
+        updateCountdown();
+        const interval = setInterval(updateCountdown, 1000);
+
+
+    </script>
 </body>
 
 </html>
