@@ -210,6 +210,7 @@
         <ul>
             <li onclick="goToHash('#top')">Inicio</li>
             <li onclick="goToHash('#location')">Locais</li>
+            <li onclick="goToPage('https://chat.whatsapp.com/IeWTrfrOAgI5Uc6DSEZj3M')">Whatsapp do evento</li>
         </ul>
     </section>
 
@@ -229,9 +230,9 @@
         <h2>Locais das celebrações</h2>
         <div class="info">
             <p>No próprio dia iremos ter placas informativas em Evoramonte para que possam estacionar sem surpresas, uma vez que os acessos à igreja não são os mais encantadores do mundo.<br>Pensar positivo, há que esvaziar a barriga para o Copo de Água! 🥳<br><br>
-            [ Parque 3 ] - 5 min. a pé até à igreja (calçada íngreme)<br>
-            [ Parque 2 ] - 10 min. a pé até à igreja (calçada íngreme)<br>
-            [ Parque 1 ] - 1 min. a pé até à igreja <br>
+            [ Parque 3 ] - 5 min. a pé - calçada íngreme<br>
+            [ Parque 2 ] - 10 min. a pé - calçada íngreme<br>
+            [ Parque 1 ] - 30 seg. a pé <br>
             
             </p>
 
@@ -263,7 +264,7 @@
     <section class="updating-wrapper wrapper">
         <h2>Fica atento(a) !</h2>
         <div class="info">
-            <p>Outras informações que achemos relevantes, irão aparecer aqui 😊</p>
+            <p>Outras informações relevantes, irão aparecer aqui 😊</p>
         </div>
     </section>
 
@@ -298,6 +299,9 @@
             location.hash = element;
         }
 
+        function goToPage(url) {
+            document.location.href = url;
+        }
 
         const targetDate = new Date("2025-06-13T23:59:59");
         function updateCountdown() {
