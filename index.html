@@ -166,7 +166,7 @@
             gap: 12px;
             height: 42px;
             text-decoration: none;
-            color: #888888;
+            color: #6e6e6e;
             background-color: #fff;
             font-size: 13px;
             font-weight: bold;
@@ -199,6 +199,16 @@
         .wrapper .info .links a.waze div {
             background-image: url("assets/waze.png");
         }
+
+        .wrapper .info .links a.whatsapp div {
+            background-image: url("assets/whatsapp.png");
+        }
+
+        .wrapper .info img {
+            width: 25%;
+            mix-blend-mode: multiply;
+            margin: 0 0 12px 0;
+        }
     </style>
 
 </head>
@@ -210,7 +220,7 @@
         <ul>
             <li onclick="goToHash('#top')">Inicio</li>
             <li onclick="goToHash('#location')">Locais</li>
-            <li onclick="goToPage('https://chat.whatsapp.com/IeWTrfrOAgI5Uc6DSEZj3M')">Whatsapp do evento</li>
+            <li onclick="goToPage('https://chat.whatsapp.com/IeWTrfrOAgI5Uc6DSEZj3M')">Whatsapp da Festa</li>
         </ul>
     </section>
 
@@ -220,9 +230,10 @@
             <p>Sejam muito bem-vindos a esta festa tão especial, onde decidimos juntar o casamento e o baptizado —
                 porque gostamos de emoções fortes e não sabemos fazer as coisas pela metade!<br>O texto pode ter vindo
                 da inteligência artificial (sim, queríamos uma introdução moderna e com pinta!), mas a alegria e o amor
-                são bem reais e bem nossos.<br>Obrigado por participarem connosco!</p>
+                são bem reais e bem nossos.<br>Obrigado por participarem connosco! 💖</p>
             <h3>Começa em: <h4 id="countdown"></h4>
             </h3>
+            <img src="assets/giphy.gif" />
         </div>
     </section>
 
@@ -240,11 +251,11 @@
             <h4>12:30h</h4>
             <div class="links">
                 <a href="https://maps.apple.com/place?place-id=ID830986AE4C6C091&_provider=9902" target="_blank"
-                    class="apple">Abrir com Apple Maps<div></div></a>
-                <a href="https://maps.app.goo.gl/DVB7MzrrPY5Hup3j8" target="_blank" class="google">Abrir com Google
+                    class="apple">Abrir em Apple Maps<div></div></a>
+                <a href="https://maps.app.goo.gl/DVB7MzrrPY5Hup3j8" target="_blank" class="google">Abrir em Google
                     Maps<div></div></a>
                 <a href="https://ul.waze.com/ul?ll=38.77025442%2C-7.71661878&navigate=yes&zoom=17&utm_campaign=default&utm_source=waze_website&utm_medium=lm_share_location"
-                    target="_blank" class="waze">Abrir com Waze<div></div></a>
+                    target="_blank" class="waze">Abrir em Waze<div></div></a>
             </div>
         </div>
         <div class="info">
@@ -253,13 +264,27 @@
             <p>Quem quiser ir diretamente para o copo de água pode ir! Não levamos a mal 😎</p>
             <div class="links">
                 <a href="https://maps.apple.com/place?place-id=I26C156F6E0B97A92&_provider=9902" target="_blank"
-                    class="apple">Abrir com Apple Maps<div></div></a>
-                <a href="https://maps.app.goo.gl/HaU7NgmMrsdXaa3p9" target="_blank" class="google">Abrir com Google
+                    class="apple">Abrir em Apple Maps<div></div></a>
+                <a href="https://maps.app.goo.gl/HaU7NgmMrsdXaa3p9" target="_blank" class="google">Abrir em Google
                     Maps<div></div></a>
                 <a href="https://ul.waze.com/ul?venue_id=230752642.-1987178733.11491140&overview=yes&utm_campaign=default&utm_source=waze_website&utm_medium=lm_share_location"
-                    target="_blank" class="waze">Abrir com Waze<div></div></a>
+                    target="_blank" class="waze">Abrir em Waze<div></div></a>
             </div>
         </div>
+    </section>
+
+    <section class="whatsapp-wrapper wrapper">
+        <h2>Whatsapp da Festa</h2>
+        <div class="info">
+            <p>Esclarecimento de dúvidas, partilha de informações, fotografias e vídeos que queiram enviar 👇</p>
+            <div class="links">
+            <a href="https://chat.whatsapp.com/IeWTrfrOAgI5Uc6DSEZj3M" target="_blank"
+                    class="whatsapp">Abrir em Whatsapp<div></div></a>
+            <p><br>A ligação para voltarem a esta página estará sempre afixada no topo do chat (📍)<br><br>
+            ( se faltou adicionar alguém é porque provávelmente não tinhamos o contacto. Nesse caso, agradecemos que adicionem 🙏 )</p>
+        </div>
+        </div>
+        
     </section>
 
     <section class="updating-wrapper wrapper">
