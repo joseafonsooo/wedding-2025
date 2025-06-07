@@ -1,358 +1,415 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Casamento e Baptismo 2025</title>
     <style>
-        html,
-        body,
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6,
-        p,
-        span,
-        a,
-        i,
-        u,
-        li {
-            margin: 0;
-            padding: 0;
-            border: 0;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-            color: #333;
-        }
+      html,
+      body,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      p,
+      span,
+      a,
+      i,
+      u,
+      li {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+          "Segoe UI Symbol";
+        color: #333;
+      }
 
-        body {
-            scroll-behavior: smooth;
-            background-color: #f1f1f1;
-        }
+      body {
+        scroll-behavior: smooth;
+        background-color: #f1f1f1;
+      }
 
-        .menu-wrapper {
-            position: fixed;
-            top: 0;
-            right: 0;
-            margin: 16px;
-            display: flex;
-            flex-flow: row wrap;
-            justify-content: center;
-            align-items: center;
-            padding: 0;
-            box-sizing: border-box;
-            background-color: #fff;
-            width: 40px;
-            height: 40px;
-            border-radius: 999px;
-            border: none;
-            box-shadow: 0px 2px 8px #cacaca;
-            cursor: pointer;
-            transition: box-shadow .15s linear;
-        }
+      .menu-wrapper {
+        position: fixed;
+        top: 0;
+        right: 0;
+        margin: 16px;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        box-sizing: border-box;
+        background-color: #fff;
+        width: 40px;
+        height: 40px;
+        border-radius: 999px;
+        border: none;
+        box-shadow: 0px 2px 8px #cacaca;
+        cursor: pointer;
+        transition: box-shadow 0.15s linear;
+      }
 
-        .menu-wrapper:hover {
-            box-shadow: 0px 2px 16px #afafaf;
-            transition: box-shadow .15s linear;
-        }
+      .menu-wrapper:hover {
+        box-shadow: 0px 2px 16px #afafaf;
+        transition: box-shadow 0.15s linear;
+      }
 
-        .menu-wrapper ul {
-            display: none;
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            flex-flow: column wrap;
-            justify-content: center;
-            align-items: self-start;
-            background: #fff;
-            padding: 20px;
-            box-sizing: border-box;
-            margin: 0 16px;
-            position: fixed;
-            top: 74px;
-            right: 0;
-            border-radius: 10px;
-            box-shadow: 0px 2px 8px #cacaca;
-        }
+      .menu-wrapper ul {
+        display: none;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: self-start;
+        background: #fff;
+        padding: 20px;
+        box-sizing: border-box;
+        margin: 0 16px;
+        position: fixed;
+        top: 74px;
+        right: 0;
+        border-radius: 10px;
+        box-shadow: 0px 2px 8px #cacaca;
+      }
 
-        .menu-wrapper ul.show {
-            display: flex;
-        }
+      .menu-wrapper ul.show {
+        display: flex;
+      }
 
-        .menu-wrapper ul li {
-            font-weight: 600;
-            margin: 0 0 12px;
-        }
+      .menu-wrapper ul li {
+        font-weight: 600;
+        margin: 0 0 12px;
+      }
 
-        .menu-wrapper ul li:last-of-type {
-            margin: 0 0 0;
-        }
+      .menu-wrapper ul li:last-of-type {
+        margin: 0 0 0;
+      }
 
-        .menu-wrapper .button {
-            width: 24px;
-            height: 24px;
-            background-size: contain;
-            background-position: center;
-            background-repeat: no-repeat;
-        }
+      .menu-wrapper .button {
+        width: 24px;
+        height: 24px;
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
 
-        .menu-wrapper.dots .button {
-            background-image: url("assets/m-dots.svg");
-        }
+      .menu-wrapper.dots .button {
+        background-image: url("assets/m-dots.svg");
+      }
 
-        .menu-wrapper.close .button {
-            background-image: url("assets/m-close.svg");
-        }
+      .menu-wrapper.close .button {
+        background-image: url("assets/m-close.svg");
+      }
 
-        #top {
-            height: 56px;
-            width: 100%;
-        }
+      #top {
+        height: 56px;
+        width: 100%;
+      }
 
-        .wrapper {
-            max-width: 425px;
-            margin: 0 auto;
-            padding: 42px 16px;
-            box-sizing: border-box;
-        }
+      .wrapper {
+        max-width: 425px;
+        margin: 0 auto;
+        padding: 42px 16px;
+        box-sizing: border-box;
+      }
 
-        .wrapper h2 {
-            font-size: 42px;
-            font-weight: 700;
-            line-height: 110%;
-            margin: 0 0 32px;
-            padding: 0 0 24px;
-            border-bottom: 1px solid #bfbfbf;
-        }
+      .wrapper h2 {
+        font-size: 42px;
+        font-weight: 700;
+        line-height: 110%;
+        margin: 0 0 32px;
+        padding: 0 0 24px;
+        border-bottom: 4px dotted #e8cfe0;
+        color: #69134d;
+      }
 
-        .wrapper .info h3 {
-            font-size: 18px;
-            font-weight: 700;
-            margin: 0;
-        }
+      .wrapper .info h3 {
+        font-size: 18px;
+        font-weight: 700;
+        margin: 0;
+        color: #5a4f56;
+      }
 
-        .wrapper .info h4 {
-            font-size: 16px;
-            font-weight: 400;
-            margin: 0 0 24px;
-        }
+      .wrapper .info h4 {
+        font-size: 16px;
+        font-weight: 400;
+        margin: 0 0 24px;
+      }
 
-        .wrapper .info p {
-            font-weight: 400;
-            margin: 0 0 24px;
-        }
+      .wrapper .info p {
+        font-weight: 400;
+        margin: 0 0 24px;
+      }
 
-        .wrapper .info .links {
-            display: flex;
-            flex-flow: column wrap;
-            justify-content: center;
-            align-items: center;
-            gap: 16px;
-            margin: 0 0 32px;
-        }
+      .wrapper .info .links {
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 16px;
+        margin: 0 0 32px;
+      }
 
-        .wrapper .info .links a {
-            width: 100%;
-            border-radius: 999px;
-            border: none;
-            box-shadow: 0px 2px 8px #cacaca;
-            box-sizing: border-box;
-            display: flex;
-            flex-flow: row wrap;
-            justify-content: center;
-            align-items: center;
-            gap: 12px;
-            height: 42px;
-            text-decoration: none;
-            color: #6e6e6e;
-            background-color: #fff;
-            font-size: 13px;
-            font-weight: bold;
-            padding: 0 0 0 10px;
-            transition: box-shadow .15s linear;
-        }
+      .wrapper .info .links a {
+        width: 100%;
+        border-radius: 999px;
+        border: none;
+        box-shadow: 0px 2px 8px #cacaca;
+        box-sizing: border-box;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 12px;
+        height: 42px;
+        text-decoration: none;
+        color: #af7891;
+        background-color: #ffe6e6;
+        font-size: 13px;
+        font-weight: bold;
+        padding: 0 0 0 10px;
+        transition: box-shadow 0.15s linear;
+        border: 2px solid #ffffff;
+      }
 
-        .wrapper .info .links a:hover {
-            box-shadow: 0px 2px 16px #afafaf;
-            transition: box-shadow .15s linear;
-        }
+      .wrapper .info .links a:hover {
+        box-shadow: 0px 2px 16px #afafaf;
+        transition: box-shadow 0.15s linear;
+      }
 
-        .wrapper .info .links a div {
-            width: 46px;
-            height: 28px;
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            border-radius: 999px;
-        }
+      .wrapper .info .links a div {
+        width: 46px;
+        height: 28px;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        border-radius: 999px;
+        border: 2px solid #ffffff;
+      }
 
-        .wrapper .info .links a.apple div {
-            background-image: url("assets/apple.png");
-        }
+      .wrapper .info .links a.apple div {
+        background-image: url("assets/apple.png");
+      }
 
-        .wrapper .info .links a.google div {
-            background-image: url("assets/google.png");
-        }
+      .wrapper .info .links a.google div {
+        background-image: url("assets/google.png");
+      }
 
-        .wrapper .info .links a.waze div {
-            background-image: url("assets/waze.png");
-        }
+      .wrapper .info .links a.waze div {
+        background-image: url("assets/waze.png");
+      }
 
-        .wrapper .info .links a.whatsapp div {
-            background-image: url("assets/whatsapp.png");
-        }
+      .wrapper .info .links a.whatsapp div {
+        background-image: url("assets/whatsapp.png");
+      }
 
-        .wrapper .info img {
-            width: 25%;
-            mix-blend-mode: multiply;
-            margin: 0 0 12px 0;
-        }
+      .wrapper .info img {
+        width: 25%;
+        mix-blend-mode: multiply;
+        margin: 0 0 12px 0;
+      }
     </style>
+  </head>
 
-</head>
-
-<body>
+  <body>
     <div id="top"></div>
     <section class="menu-wrapper dots">
-        <div class="button"></div>
-        <ul>
-            <li onclick="goToHash('#top')">Inicio</li>
-            <li onclick="goToHash('#location')">Locais</li>
-            <li onclick="goToPage('https://chat.whatsapp.com/IeWTrfrOAgI5Uc6DSEZj3M')">Whatsapp da Festa</li>
-        </ul>
+      <div class="button"></div>
+      <ul>
+        <li onclick="goToHash('#top')">Inicio</li>
+        <li onclick="goToHash('#location')">Locais</li>
+        <li
+          onclick="goToPage('https://chat.whatsapp.com/IeWTrfrOAgI5Uc6DSEZj3M')"
+        >
+          Whatsapp da Festa
+        </li>
+      </ul>
     </section>
 
     <section class="intro-wrapper wrapper" id="intro">
-        <h2>Querida família<br>e amigos</h2>
-        <div class="info">
-            <p>Sejam muito bem-vindos a esta festa tão especial, onde decidimos juntar o casamento e o baptizado —
-                porque gostamos de emoções fortes e não sabemos fazer as coisas pela metade!<br>O texto pode ter vindo
-                da inteligência artificial (sim, queríamos uma introdução moderna e com pinta!), mas a alegria e o amor
-                são bem reais e bem nossos.<br>Obrigado por participarem connosco! 💖</p>
-            <h3>Começa em: <h4 id="countdown"></h4>
-            </h3>
-            <img src="assets/giphy.gif" />
-        </div>
+      <h2>Querida família<br />e amigos</h2>
+      <div class="info">
+        <p>
+          Sejam muito bem-vindos a esta festa tão especial, onde decidimos
+          juntar o casamento e o baptizado — porque gostamos de emoções fortes e
+          não sabemos fazer as coisas pela metade!<br />O texto pode ter vindo
+          da inteligência artificial (sim, queríamos uma introdução moderna e
+          com pinta!), mas a alegria e o amor são bem reais e bem nossos.<br />Obrigado
+          por participarem connosco! 💖
+        </p>
+        <h3>
+          Começa em:
+          <h4 id="countdown"></h4>
+        </h3>
+        <img src="assets/giphy.gif" />
+      </div>
     </section>
 
     <section class="location-wrapper wrapper" id="location">
-        <h2>Locais das celebrações</h2>
-        <div class="info">
-            <p>No próprio dia iremos ter placas informativas em Evoramonte para que possam estacionar sem surpresas, uma vez que os acessos à igreja não são os mais encantadores do mundo.<br>Pensar positivo, há que esvaziar a barriga para o Copo de Água! 🥳<br><br>
-            [ Parque 3 ] - 5 min. a pé - calçada íngreme<br>
-            [ Parque 2 ] - 10 min. a pé - calçada íngreme<br>
-            [ Parque 1 ] - 30 seg. a pé <br>
-            
-            </p>
+      <h2>Locais das celebrações</h2>
+      <div class="info">
+        <p>
+          No próprio dia iremos ter placas informativas em Evoramonte para que
+          possam estacionar sem surpresas, uma vez que os acessos à igreja não
+          são os mais encantadores do mundo.<br />Pensar positivo, há que
+          esvaziar a barriga para o Copo de Água! 🥳<br /><br />
+          [ Parque 3 ] - 5 min. a pé - calçada íngreme<br />
+          [ Parque 2 ] - 10 min. a pé - calçada íngreme<br />
+          [ Parque 1 ] - 30 seg. a pé <br />
+        </p>
 
-            <h3>Local da Cerimónia</h3>
-            <h4>12:30h</h4>
-            <div class="links">
-                <a href="https://maps.apple.com/place?place-id=ID830986AE4C6C091&_provider=9902" target="_blank"
-                    class="apple">Abrir em Apple Maps<div></div></a>
-                <a href="https://maps.app.goo.gl/DVB7MzrrPY5Hup3j8" target="_blank" class="google">Abrir em Google
-                    Maps<div></div></a>
-                <a href="https://ul.waze.com/ul?ll=38.77025442%2C-7.71661878&navigate=yes&zoom=17&utm_campaign=default&utm_source=waze_website&utm_medium=lm_share_location"
-                    target="_blank" class="waze">Abrir em Waze<div></div></a>
-            </div>
+        <h3>Local da Cerimónia</h3>
+        <h4>12:30h</h4>
+        <div class="links">
+          <a
+            href="https://maps.apple.com/place?place-id=ID830986AE4C6C091&_provider=9902"
+            target="_blank"
+            class="apple"
+            >Abrir em Apple Maps
+            <div></div
+          ></a>
+          <a
+            href="https://maps.app.goo.gl/DVB7MzrrPY5Hup3j8"
+            target="_blank"
+            class="google"
+            >Abrir em Google Maps
+            <div></div
+          ></a>
+          <a
+            href="https://ul.waze.com/ul?ll=38.77025442%2C-7.71661878&navigate=yes&zoom=17&utm_campaign=default&utm_source=waze_website&utm_medium=lm_share_location"
+            target="_blank"
+            class="waze"
+            >Abrir em Waze
+            <div></div
+          ></a>
         </div>
-        <div class="info">
-            <h3>Local do Copo de Água</h3>
-            <h4>14:30h</h4>
-            <p>Quem quiser ir diretamente para o copo de água pode ir! Não levamos a mal 😎</p>
-            <div class="links">
-                <a href="https://maps.apple.com/place?place-id=I26C156F6E0B97A92&_provider=9902" target="_blank"
-                    class="apple">Abrir em Apple Maps<div></div></a>
-                <a href="https://maps.app.goo.gl/HaU7NgmMrsdXaa3p9" target="_blank" class="google">Abrir em Google
-                    Maps<div></div></a>
-                <a href="https://ul.waze.com/ul?venue_id=230752642.-1987178733.11491140&overview=yes&utm_campaign=default&utm_source=waze_website&utm_medium=lm_share_location"
-                    target="_blank" class="waze">Abrir em Waze<div></div></a>
-            </div>
+      </div>
+      <div class="info">
+        <h3>Local do Copo de Água</h3>
+        <h4>14:30h</h4>
+        <p>
+          Quem quiser ir diretamente para o copo de água pode ir! Não levamos a
+          mal 😎
+        </p>
+        <div class="links">
+          <a
+            href="https://maps.apple.com/place?place-id=I26C156F6E0B97A92&_provider=9902"
+            target="_blank"
+            class="apple"
+            >Abrir em Apple Maps
+            <div></div
+          ></a>
+          <a
+            href="https://maps.app.goo.gl/HaU7NgmMrsdXaa3p9"
+            target="_blank"
+            class="google"
+            >Abrir em Google Maps
+            <div></div
+          ></a>
+          <a
+            href="https://ul.waze.com/ul?venue_id=230752642.-1987178733.11491140&overview=yes&utm_campaign=default&utm_source=waze_website&utm_medium=lm_share_location"
+            target="_blank"
+            class="waze"
+            >Abrir em Waze
+            <div></div
+          ></a>
         </div>
+      </div>
     </section>
 
     <section class="whatsapp-wrapper wrapper">
-        <h2>Whatsapp da Festa</h2>
-        <div class="info">
-            <p>Esclarecimento de dúvidas, partilha de informações, fotografias e vídeos que queiram enviar 👇</p>
-            <div class="links">
-            <a href="https://chat.whatsapp.com/IeWTrfrOAgI5Uc6DSEZj3M" target="_blank"
-                    class="whatsapp">Abrir em Whatsapp<div></div></a>
-            <p><br>A ligação para voltarem a esta página estará sempre afixada no topo do chat (📍)<br><br>
-            ( se faltou adicionar alguém é porque provávelmente não tinhamos o contacto. Nesse caso, agradecemos que adicionem 🙏 )</p>
+      <h2>Whatsapp da Festa</h2>
+      <div class="info">
+        <p>
+          Esclarecimento de dúvidas, partilha de informações, fotografias e
+          vídeos que queiram enviar 👇
+        </p>
+        <div class="links">
+          <a
+            href="https://chat.whatsapp.com/IeWTrfrOAgI5Uc6DSEZj3M"
+            target="_blank"
+            class="whatsapp"
+            >Abrir em Whatsapp
+            <div></div
+          ></a>
+          <p>
+            <br />A ligação para voltarem a esta página estará sempre afixada no
+            topo do chat (📍)<br /><br />
+            ( se faltou adicionar alguém é porque provávelmente não tinhamos o
+            contacto. Nesse caso, agradecemos que adicionem 🙏 )
+          </p>
         </div>
-        </div>
-        
+      </div>
     </section>
 
     <section class="updating-wrapper wrapper">
-        <h2>Fica atento(a) !</h2>
-        <div class="info">
-            <p>Outras informações relevantes, irão aparecer aqui 😊</p>
-        </div>
+      <h2>Fica atento(a) !</h2>
+      <div class="info">
+        <p>Outras informações relevantes, irão aparecer aqui 😊</p>
+      </div>
     </section>
 
-
-
     <script>
-        function menuControl() {
-            var menu = document.querySelector(".menu-wrapper");
-            menu.addEventListener("click", function (event) {
-                if (menu.classList.contains("dots")) {
-                    menu.classList.remove("dots");
-                    menu.classList.add("close");
-                    menu.querySelector("ul").classList.add("show");
-                } else {
-                    menu.classList.add("dots");
-                    menu.classList.remove("close");
-                    menu.querySelector("ul").classList.remove("show");
-                }
-            });
-            document.addEventListener("click", function (event) {
-                var targetElement = event.target;
-                if (!menu.contains(targetElement)) {
-                    menu.classList.add("dots");
-                    menu.classList.remove("close");
-                    menu.querySelector("ul").classList.remove("show");
-                }
-            });
+      function menuControl() {
+        var menu = document.querySelector(".menu-wrapper");
+        menu.addEventListener("click", function (event) {
+          if (menu.classList.contains("dots")) {
+            menu.classList.remove("dots");
+            menu.classList.add("close");
+            menu.querySelector("ul").classList.add("show");
+          } else {
+            menu.classList.add("dots");
+            menu.classList.remove("close");
+            menu.querySelector("ul").classList.remove("show");
+          }
+        });
+        document.addEventListener("click", function (event) {
+          var targetElement = event.target;
+          if (!menu.contains(targetElement)) {
+            menu.classList.add("dots");
+            menu.classList.remove("close");
+            menu.querySelector("ul").classList.remove("show");
+          }
+        });
+      }
+      menuControl();
+
+      function goToHash(element) {
+        location.hash = element;
+      }
+
+      function goToPage(url) {
+        document.location.href = url;
+      }
+
+      const targetDate = new Date("2025-06-13T23:59:59");
+      function updateCountdown() {
+        const now = new Date();
+        const diff = targetDate - now;
+
+        if (diff <= 0) {
+          document.getElementById("countdown").textContent = "0d  0h  0m  0s";
+          clearInterval(interval);
+          return;
         }
-        menuControl();
 
-        function goToHash(element) {
-            location.hash = element;
-        }
+        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+        const minutes = Math.floor((diff / (1000 * 60)) % 60);
+        const seconds = Math.floor((diff / 1000) % 60);
 
-        function goToPage(url) {
-            document.location.href = url;
-        }
-
-        const targetDate = new Date("2025-06-13T23:59:59");
-        function updateCountdown() {
-            const now = new Date();
-            const diff = targetDate - now;
-
-            if (diff <= 0) {
-                document.getElementById("countdown").textContent = "0d  0h  0m  0s";
-                clearInterval(interval);
-                return;
-            }
-
-            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
-            const minutes = Math.floor((diff / (1000 * 60)) % 60);
-            const seconds = Math.floor((diff / 1000) % 60);
-
-            document.getElementById("countdown").textContent =
-                `${days}d  ${hours}h  ${minutes}m  ${seconds}s`;
-        }
-        updateCountdown();
-        const interval = setInterval(updateCountdown, 1000);
-
-
+        document.getElementById(
+          "countdown"
+        ).textContent = `${days}d  ${hours}h  ${minutes}m  ${seconds}s`;
+      }
+      updateCountdown();
+      const interval = setInterval(updateCountdown, 1000);
     </script>
-</body>
-
+  </body>
 </html>
